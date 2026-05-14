@@ -4,19 +4,19 @@
 
 ## TEMA 1: Gestión de Configuración y Versionado
 
-Este documento introduce los fundamentos de la **Gestión de Configuración**, centrándose específicamente en el **Versionado** como una práctica esencial para el desarrollo profesional. 
+Este documento introduce los fundamentos de la **Gestión de Configuración**, centrándose específicamente en el **Versionado** como una práctica esencial para el desarrollo profesional.
 
 ### 1. Definiciones Fundamentales
 
-* **Sistema**: Se define como la combinación de elementos organizados (hardware, código, documentación, requerimientos, pruebas, etc.) para cumplir objetivos específicos. 
-* **Gestión de Configuración**: Es la aplicación de prácticas para identificar y documentar los ítems configurables de un producto, controlando y registrando todo el ciclo de vida de los cambios (aprobación, implementación, verificación). 
+* **Sistema**: Se define como la combinación de elementos organizados (hardware, código, documentación, requerimientos, pruebas, etc.) para cumplir objetivos específicos.
+* **Gestión de Configuración**: Es la aplicación de prácticas para identificar y documentar los ítems configurables de un producto, controlando y registrando todo el ciclo de vida de los cambios (aprobación, implementación, verificación).
 
 ### 2. Elementos de la Gestión de Configuración
 
-Dentro de esta disciplina, encontramos tres pilares principales: 
+Dentro de esta disciplina, encontramos tres pilares principales:
 
-1. **Sistemas de control de versiones**: No se limitan solo al código fuente. 
-2. **Herramientas de integración / construcción**: Enfocadas en la automatización (CI/CD). 
+1. **Sistemas de control de versiones**: No se limitan solo al código fuente.
+2. **Herramientas de integración / construcción**: Enfocadas en la automatización (CI/CD).
 3. **Sistemas de control de cambios**: Gestión de incidencias o "issues".
 
 ### 3. ¿Por qué versionar? (Pros y Contras)
@@ -33,24 +33,24 @@ El uso de estas herramientas ofrece una estructura sólida para el trabajo en eq
 
 ### 4. Herramientas y Tecnologías
 
-* **Tecnologías de control**: Git (la más utilizada actualmente), Subversion, Mercurial. 
-* **Plataformas de hosting**: GitHub, GitLab, Bitbucket. 
+* **Tecnologías de control**: Git (la más utilizada actualmente), Subversion, Mercurial.
+* **Plataformas de hosting**: GitHub, GitLab, Bitbucket.
 
 ### 5. Conceptos Clave de Git
 
-* **Repositorio**: El proyecto completo, una copia de todo el código. 
-* **Ramas (Branches)**: Separaciones del código para diferentes contextos (features, fixes, master, QA). 
-* **Etiquetas (Tags)**: Marcas asociadas a commits específicos para identificar hitos o versiones (v1.0, v2.0). 
+* **Repositorio**: El proyecto completo, una copia de todo el código.
+* **Ramas (Branches)**: Separaciones del código para diferentes contextos (features, fixes, master, QA).
+* **Etiquetas (Tags)**: Marcas asociadas a commits específicos para identificar hitos o versiones (v1.0, v2.0).
 
 ### 6. Flujo de Trabajo (Morning Routine)
 
-El proceso diario típico de un desarrollador sigue estos pasos: 
+El proceso diario típico de un desarrollador sigue estos pasos:
 
-1. **`git pull`**: Descargar o actualizar la copia local con los cambios del servidor remoto. 
-2. **Trabajo local**: Generar nuevos archivos o modificar los existentes. 
-3. **`git add`**: Pasar los cambios al área de preparación (*stage*). 
-4. **`git commit`**: Registrar los cambios localmente. 
-5. **`git push`**: Enviar los cambios locales al servidor remoto. 
+1. **`git pull`**: Descargar o actualizar la copia local con los cambios del servidor remoto.
+2. **Trabajo local**: Generar nuevos archivos o modificar los existentes.
+3. **`git add`**: Pasar los cambios al área de preparación (*stage*).
+4. **`git commit`**: Registrar los cambios localmente.
+5. **`git push`**: Enviar los cambios locales al servidor remoto.
 
 > **Nota sobre Conflictos**: Ocurren cuando dos desarrolladores modifican el mismo archivo simultáneamente. Para resolverlo, es necesario sincronizar la copia local, unificar versiones con el par y actualizar el servidor remoto.
 
@@ -60,15 +60,15 @@ El proceso diario típico de un desarrollador sigue estos pasos:
 
 1. **¿Qué es la Gestión de Configuración y qué relación tiene con el versionado?**
 
-* *Respuesta sugerida*: Es la práctica de identificar, documentar y controlar los cambios en los ítems de un producto. El versionado es una de las herramientas dentro de esta gestión para controlar las evoluciones del código y otros elementos. 
+* *Respuesta sugerida*: Es la práctica de identificar, documentar y controlar los cambios en los ítems de un producto. El versionado es una de las herramientas dentro de esta gestión para controlar las evoluciones del código y otros elementos.
 
 2. **Explique la diferencia entre una Rama (Branch) y una Etiqueta (Tag).**
 
-* *Respuesta sugerida*: Las ramas son separaciones del código para trabajar en diferentes contextos (como una funcionalidad nueva), mientras que las etiquetas son marcas estáticas en un commit específico para identificar versiones o hitos. 
+* *Respuesta sugerida*: Las ramas son separaciones del código para trabajar en diferentes contextos (como una funcionalidad nueva), mientras que las etiquetas son marcas estáticas en un commit específico para identificar versiones o hitos.
 
 3. **Describa el escenario de un conflicto de versiones y cómo se resuelve.**
 
-* *Respuesta sugerida*: Ocurre cuando el "Dev A" intenta subir cambios pero el "Dev B" ya actualizó los mismos archivos en el servidor. Se resuelve sincronizando (`pull`), unificando versiones manualmente con el otro desarrollador y luego subiendo la versión final (`push`). 
+* *Respuesta sugerida*: Ocurre cuando el "Dev A" intenta subir cambios pero el "Dev B" ya actualizó los mismos archivos en el servidor. Se resuelve sincronizando (`pull`), unificando versiones manualmente con el otro desarrollador y luego subiendo la versión final (`push`).
 
 4. **¿Cuáles son los pasos iniciales (Paso 0) para empezar un proyecto con Git?**
 
@@ -102,7 +102,7 @@ Frente al **Vibe Coding** (programar solo con prompts conversacionales, lo cual 
 | Característica | Vibe Coding (Amateur) | SDD (Profesional) |
 | --- | --- | --- |
 | **Punto de inicio** | Prompt conversacional volátil. | Archivo Markdown (.md) estructurado. |
-| **Entorno** | Chat o terminal aislada. | Repositorio Git (Versionable).|
+| **Entorno** | Chat o terminal aislada. | Repositorio Git (Versionable). |
 | **Dirección Técnica** | La IA adivina arquitectura y patrones. | Límites explícitos y tecnologías forzadas. |
 | **Flujo de Entrega** | Riesgo de código roto entregado de golpe. | Iterativo, validado tarea por tarea. |
 
