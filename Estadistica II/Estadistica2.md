@@ -14,14 +14,10 @@
 
     * Poblacion infinita (o muy grande): cuando el tamaño de n es muy chico respecto a N ($\ n/N \leq 0,05$)
     * Poblacion finita: cuando n representa una parte importante de N ($\ n/N > 0,05 $)
-
 2) Factor de correccion:
-
 $$ \sqrt{\frac{N-n}{N-1}} $$
-
 3) Error estandar:
-
-$$ \sigma_{p} = \sqrt{\frac{p\cdot (p-1)}{n}} $$
+$$ \sigma_{p} = \sqrt{\frac{p\cdot (1-p)}{n}} $$
 
 ||N|n|$\rho$|$\sigma$ (error estandar)|
 |:--:|:--:|:--:|:--:|:--:|
@@ -44,5 +40,61 @@ b) El mayor error estándar se obtiene cuando la proporción de éxito es $p = 0
 ---
 
 #### Ejercicio #2
+
+##### Datos identificados
+
+* Poblacion(N): 1200 dispositivos
+* Proporcion poblacional de exitos (p) = 0,20
+* Porporcion de fracasos (q) = 1 - 0,20 = 0,80
+* Tamaño de la muestra (n) = 40 piezas
+
+##### Calculo del error estandar
+
+$$\ \frac{n}{N} = \text{???} → \frac{40}{1200} = 0,0333 \leq 0,05 → \text{No aplicar FC}$$
+
+$$ \sigma_{p} = \sqrt{\frac{0,2\cdot (1-0,2)}{40}} = 0,0632$$
+
+##### Resolucion de incisos
+
+* Formula necesaria: $z = \frac{\hat{p} - p}{\sigma_{p}}$
+
+a)
+
+* Estandarizamos z → P($\hat{p} < 0,15$)
+
+$$ z = \frac{0,15 - 0,20}{0,0632} → z= -0,7911$$
+
+* Buscamos en la tabla P(z< -0,79)
+
+$$ P(z< -0,79) = 1 - 0,7852 = 0,2148 → 21,48\%$$
+
+b)
+
+* Estandarizamos z → P($\hat{p} > 0,25$)
+
+$$ z = \frac{0,25 - 0,20}{0,0632} → z= 0,7911$$
+
+* Buscamos en la tabla P(z> 0,79)
+
+$$ P(z> 0,79) = 1 - 0,7852 = 0,2148 → 21,48\%$$
+
+c)
+
+* Estandarizamos z → P($0,15 < \hat{p} < 0,25$)
+
+$$ z = \frac{0,15 - 0,20}{0,0632} → z= -0,7911$$
+$$ z = \frac{0,25 - 0,20}{0,0632} → z= 0,7911$$
+
+* Buscamos en la tabla P(-0,79 < z < 0,79)
+
+$$ P(-0,79 < z < 0,79) = 0,7852 - 0,2148 = 0,5704 → 57,04\%$$
+
+---
+
+---
+
+#### Ejercicio #3
+
+
 
 ---
