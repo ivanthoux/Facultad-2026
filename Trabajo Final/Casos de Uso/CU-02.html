@@ -1,0 +1,101 @@
+<h3>Subsistema de Seguridad y Configuración</h3>
+
+<table border="1" cellpadding="5" cellspacing="0" width="100%">
+  <tr>
+    <td width="20%"><b>Campo</b></td>
+    <td width="80%"><b>Contenido</b></td>
+  </tr>
+  <tr>
+    <td><b>CU-02</b></td>
+    <td><b>Registrar Usuario</b></td>
+  </tr>
+  <tr>
+    <td><b>Actor</b></td>
+    <td>Administrador</td>
+  </tr>
+  <tr>
+    <td><b>Descripción</b></td>
+    <td>Permite dar de alta a un nuevo empleado de la financiera en el sistema, asignándole sus credenciales iniciales de acceso.</td>
+  </tr>
+  <tr>
+    <td><b>Precondición</b></td>
+    <td>
+      * El usuario administrador debe estar autenticado en el sistema.<br>
+      * El empleado a registrar no debe poseer una cuenta previa activa con el mismo identificador único o legajo en la base de datos.
+    </td>
+  </tr>
+  <tr>
+    <td><b>Postcondición</b></td>
+    <td>El nuevo usuario es persistido en la base de datos relacional en estado "Activo", quedando disponible para la asignación de roles y la posterior autenticación operativa.</td>
+  </tr>
+  <tr>
+    <td><b>Secuencia normal</b></td>
+    <td>
+      <table border="1" cellpadding="5" cellspacing="0" width="100%">
+        <tr>
+          <th width="10%">Paso</th>
+          <th width="45%">Acciones del usuario</th>
+          <th width="45%">Respuesta del sistema</th>
+        </tr>
+        <tr>
+          <td align="center"><b>1</b></td>
+          <td>El administrador selecciona la opción "Registrar Usuario" desde el panel de administración de personal.</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center"><b>2</b></td>
+          <td></td>
+          <td>El sistema renderiza el formulario de alta solicitando los datos obligatorios: Nombre, Apellido, DNI/Legajo, Correo Electrónico, Nombre de Usuario y Contraseña inicial.</td>
+        </tr>
+        <tr>
+          <td align="center"><b>3</b></td>
+          <td>El administrador completa los campos del formulario con la información del nuevo empleado y presiona el botón "Guardar".</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td align="center"><b>4</b></td>
+          <td></td>
+          <td>El sistema realiza las validaciones de integridad de los datos, cifra la contraseña de forma segura, persiste el registro del nuevo usuario en la base de datos con estado "Activo", asienta la acción en el log de auditoría y muestra un mensaje de confirmación exitosa.</td>
+        </tr>
+        <tr>
+          <td align="center"><b>5</b></td>
+          <td>El administrador visualiza el mensaje de éxito y el nuevo registro en el listado general de usuarios de la plataforma.</td>
+          <td></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Excepciones</b></td>
+    <td>
+      <table border="1" cellpadding="5" cellspacing="0" width="100%">
+        <tr>
+          <th width="15%">Paso</th>
+          <th width="40%">Fallo / Condición</th>
+          <th width="45%">Acción del sistema</th>
+        </tr>
+        <tr>
+          <td><b>Paso 4</b></td>
+          <td>El identificador único (Nombre de Usuario o Legajo/DNI) ya se encuentra registrado en el sistema.</td>
+          <td>El sistema interrumpe la persistencia, resalta el campo duplicado y muestra el mensaje de error: <i>'El nombre de usuario o legajo ya se encuentra registrado en el sistema.'</i>.</td>
+        </tr>
+        <tr>
+          <td><b>Paso 4</b></td>
+          <td>Se detectan campos obligatorios vacíos o el formato del correo electrónico es inválido.</td>
+          <td>El sistema detiene el proceso, marca las alertas de validación en los campos correspondientes del frontend y muestra el mensaje: <i>'Por favor, complete todos los campos obligatorios con formatos válidos.'</i>.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td><b>Estabilidad</b></td>
+    <td>Alta</td>
+  </tr>
+  <tr>
+    <td><b>Comentarios</b></td>
+    <td>
+      * El alta inicial de la cuenta se realiza por defecto en estado "Activo", pero requiere de forma complementaria la ejecución de <b>CU-05 (Asignar Roles y Permisos)</b> antes de que el nuevo empleado pueda operar los módulos del negocio.<br>
+      * Todas las contraseñas guardadas en la base de datos son procesadas mediante funciones de hash seguras provistas por el framework CodeIgniter 4.
+    </td>
+  </tr>
+</table>
