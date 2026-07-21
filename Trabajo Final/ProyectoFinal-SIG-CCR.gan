@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Proyecto Final | SIG-CCR" company="UNaM" webLink="http://" view-date="2026-03-16" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.3.3322" locale="es_AR">
+    <description/>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd15" name="Notes" width="20" order="-1"/>
+        <field id="tpd3" name="Name" width="200" order="0"/>
+        <field id="tpd4" name="Begin date" width="75" order="1"/>
+        <field id="tpd5" name="End date" width="75" order="2"/>
+        <option id="taskLabelUp" value="name"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <timeline><![CDATA[1]]></timeline>
+        <option id="color.recent"><![CDATA[#330033 #ff9999 #663300 #006666 #009900 #33ff33 #ffff00 #ff6600 #990099 #9999ff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="8f450b745774467590f22fd2564cd005" name="Fase de Inicio: Relevamiento y Análisis del negocio" color="#0000ff" meeting="false" start="2026-04-13" duration="9" complete="0" expand="true">
+            <depend id="1" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="1" uid="e9a2cf5851624f499c0854b1688d3d7b" name="Elaboración del documento y glosario" color="#66ffff" meeting="false" start="2026-04-24" duration="6" complete="0" thirdDate="2026-04-24" thirdDate-constraint="1" expand="true">
+            <depend id="2" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="2" uid="ca24b5fd73e6435a921fac4402d14325" name="Identificación de actores y Modelo de Casos de Uso" color="#9999ff" meeting="false" start="2026-05-04" duration="5" complete="0" expand="true">
+            <depend id="3" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="3" uid="50b75a399de44f279cbd3cea60b7b63a" name="Fase de Elaboración: Especificación de Casos de Uso" color="#990099" meeting="false" start="2026-05-11" duration="15" complete="0" expand="true">
+            <depend id="4" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="4" uid="9f831d549144435380421d98975e8c61" name="Diseño de la Arquitectura y Base de Datos" color="#ff6600" meeting="false" start="2026-06-01" duration="10" complete="0" expand="true">
+            <depend id="5" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="5" uid="ea5686a8e8e041429446f3f181617648" name="Configuración del entorno de desarrollo" color="#ffff00" meeting="false" start="2026-06-15" duration="5" complete="0" expand="true">
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="6" uid="18732496454d4bd6ba3c7b3fd8325978" name="Fase de Construcción: Iteración 1 - Módulo de Clientes y Créditos" color="#33ff33" meeting="false" start="2026-06-22" duration="21" complete="0" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="7" uid="dea944df270e42fcb2e31cc410bfcc77" name="Desarrollo Iteración 2 - Módulo de Caja, Cobranzas y Morosidad" color="#009900" meeting="false" start="2026-07-21" duration="23" complete="0" expand="true">
+            <depend id="8" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="8" uid="3e6f062ee32c42c3bc519d9677561240" name="Desarrollo Iteración 3 - Módulo de Refinanciación y Reportes" color="#006666" meeting="false" start="2026-08-21" duration="21" complete="0" expand="true">
+            <depend id="9" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="9" uid="8e599fc55fb740e498015ab3aef0ce1b" name="Fase de Transición: Diseño y ejecución de Pruebas Integrales" color="#663300" meeting="false" start="2026-09-21" duration="12" complete="0" expand="true">
+            <depend id="10" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="10" uid="9710f6da5a714835bdd4bfc927ffb9cf" name="Elaboración de Manuales de Usuario y Documentación" color="#ff9999" meeting="false" start="2026-10-07" duration="8" complete="0" expand="true">
+            <depend id="11" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="11" uid="22c3fefbe7de48fa96661169940ba9a8" name="Entrega final" color="#330033" meeting="false" start="2026-10-19" duration="11" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
